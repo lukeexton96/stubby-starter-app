@@ -1,7 +1,18 @@
+import React, { useEffect, useState } from 'react';
 import logo from './logo.svg';
 import './App.css';
 
 function App() {
+
+  const [userInfo, setUserInfo] = useState('');
+
+  useEffect(() => {
+    fetch('http://localhost:8882/api/getInfo')
+        .then(response => response.json())
+        .then(data => setUserInfo(data))
+        .catch(error => console.log(error));
+  }, []);
+
   return (
     <div className="App">
       <header className="App-header">
@@ -17,6 +28,8 @@ function App() {
         >
           Learn React
         </a>
+        <p> User Info: {userInfo.name} </p>
+        <img src={userInfo.profile_image} />
       </header>
     </div>
   );

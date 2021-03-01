@@ -1,0 +1,11 @@
+request:
+  url: /getInfo
+  method: GET
+
+response:
+  status: 200
+  latency: 1500
+  body: {
+    "name": "Michael Scott",
+    "profile_image": "http://upload.wikimedia.org/wikipedia/en/d/dc/MichaelScott.png"
+  }
