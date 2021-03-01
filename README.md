@@ -11,6 +11,8 @@ In the project directory, you can run:
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
+This command will also start a local stubby server that fetches some user information to help get you started with HTTP requests. The stubby instance is running on localhost:8882 with the example endpoint available on [http://localhost:8882/api/getInfo](http://localhost:8882/api/getInfo) as a working example.
+
 The page will reload if you make edits.\
 You will also see any lint errors in the console.
 
